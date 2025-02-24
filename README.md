@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">PYTHON TEMPLATE</h1>
+<h1 align="center">PYTHON TEMPLATE</h1>
 
 <p align="center"><img src="doc/template-logo.png" alt="drawing" width="250">
 
