@@ -5,9 +5,6 @@ description = "{{ cookiecutter.description }}"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "cookiecutter>=2.6.0",
-    "pytest>=8.3.3",
-    "pre-commit>=4.0.1",
     "pydantic>=2.9.2",
     "pydantic-settings>=2.6.1",
 ]
@@ -140,3 +137,10 @@ line-ending = "auto"
 
 [tool.ruff.mccabe]
 max-complexity = 10
+
+[dependency-groups]
+dev = [
+    "cookiecutter>=2.6.0",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+]
