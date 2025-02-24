@@ -1,0 +1,34 @@
+version: "3"
+
+output: group
+
+tasks:
+  default:
+    cmds:
+      - task -l
+
+  pre-commit-install:
+    ignore_error: true
+    internal: true
+    cmds:
+      - uv run pre-commit install
+
+  init:
+    desc: Initialize project environment.
+    deps: [pre-commit-install]
+    cmds:
+      - uv sync
+
+  test:
+    desc: Run test suite.
+    cmds:
+      - uv run pytest -vv
+
+  lint:
+    desc: Run linters.
+    cmds:
+      - uv run pre-commit run --all-files
+
+  build:
+    desc: Build stage for CI.
+    deps: [test, lint]
