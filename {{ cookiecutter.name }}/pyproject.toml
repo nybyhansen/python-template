@@ -17,7 +17,7 @@ build-backend = "hatchling.build"
 packages = ["src"]
 
 [tool.black]
-target-version = ['py312']
+target-version = ['py313']
 line-length = 100
 include = '\.pyi?$'
 exclude = '''
@@ -55,7 +55,7 @@ show_error_codes = true
 
 [tool.ruff]
 line-length = 100
-target-version = "py312"
+target-version = "py313"
 exclude = [
     ".bzr",
     ".direnv",
